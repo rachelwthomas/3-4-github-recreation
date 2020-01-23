@@ -1,13 +1,27 @@
 .header {
-  background-color: purple;
+  background-color: #25292E;
   height: 20px; }
 
 .main {
-  background-color: blue;
+  background-color: #FFF;
+  border: solid 1px black;
   height: 20px; }
 
 .aside {
-  background-color: yellow;
+  background-color: #FFF;
+  border: solid 1px black;
   height: 20px; }
+
+.overview {
+  height: 20px;
+  border: solid 1px black; }
+
+.search-bar {
+  height: 20px;
+  border: solid 1px black; }
+
+.repo {
+  height: 20px;
+  border: solid 1px black; }
 
 /*# sourceMappingURL=styles.css.map */
