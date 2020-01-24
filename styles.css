@@ -12,6 +12,12 @@
   border: solid 1px black;
   height: 20px; }
 
+.profile-picture img {
+  width: 100%; }
+
+.organizations img {
+  height: 25px; }
+
 .overview {
   height: 20px;
   border: solid 1px black; }

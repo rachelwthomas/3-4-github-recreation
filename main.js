@@ -26,11 +26,45 @@ $(document).ready(function() {
 //   let updateOrgs = (orgs) => {
 //     console.log(orgs.login)
 //   }
+// ***********************************************************Profile picture
+
+
+$.ajax(`https://api.github.com/users/rachelwthomas?
+  client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  .done((resp) => {
+   console.log(resp);
+   updateProfileTemplate(resp)
+  })
+  .fail((err) => {
+    console.log(err);
+  })
+  .always(() => {
+    // console.log('always fires');
+  });
+
+  let updateProfileTemplate = (profData) => {
+    console.log('prof', profData);
+  }
 
 
 
 
-// });
+
+
+
+let profile = $('#profile-template').html();
+
+let profileTemplate = Handlebars.compile(profile);
+
+let prof = {avatar_url:"https://avatars0.githubusercontent.com/u/58479626?v=4",login:"rachelwthomas",name:"Rachel Thomas"}
+
+let htmlProf = profileTemplate(prof);
+console.log(htmlProf);
+
+$('.profile-picture').html(htmlProf);
+
+
+
 // *************************************************Organizations
 
 
@@ -53,7 +87,7 @@ $(document).ready(function() {
 
 
 
-});
+
 
 
 
@@ -81,3 +115,9 @@ $('.organizations').html(htmlOrgs);
 // console.log(htmlOrgs);
 //
 // $('.organizations').html(htmlOrgs);
+
+
+
+
+
+});
