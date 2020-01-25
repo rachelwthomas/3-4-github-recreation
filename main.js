@@ -45,15 +45,11 @@ $.ajax(`https://api.github.com/users/rachelwthomas?
   let updateProfileTemplate = (profData) => {
     // console.log('prof', profData);
 
+    let profileSource = $('#profile-template').html();
 
+    let profileTemplate = Handlebars.compile(profileSource);
 
-    let profile = $('#profile-template').html();
-
-    let profileTemplate = Handlebars.compile(profile);
-
-    let prof = {avatar_url:"https://avatars0.githubusercontent.com/u/58479626?v=4",login:"rachelwthomas",name:"Rachel Thomas"}
-
-    let htmlProf = profileTemplate(prof);
+    let htmlProf = profileTemplate({prof:profData});
     // console.log(htmlProf);
 
     $('.profile-picture').html(htmlProf);

@@ -64,10 +64,12 @@
 
 
 <script id="profile-template" type="text/x-handlebars-template">
+  {{#prof}}
   <div><img src={{avatar_url}} alt="">
   <div>{{name}}</div>
   <div>{{login}}</div>
   </div>
+  {{/prof}}
 </script>
 
 <script id="organizations-template" type="text/x-handlebars-template">
