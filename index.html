@@ -14,10 +14,26 @@
 <div class="container-fluid">
 
   <!-- *************************************header -->
-  <header class="header row">
+  <!-- <header class="header row">
     <div class="left col-md-4 col-lg-4 col-xl-3"></div>
     <div class="middle  col-md-4 col-lg-4 col-xl-3"></div>
     <div class="right col-md-4 offset-lg-2 col-lg-2 offset-xl-5 col-xl-1"></div>
+  </header> -->
+
+  <header class="header row">
+    <div class="left col-6">
+      <div class="github-icon"></div>
+      <div class="searchbar">
+        <input type="text" placeholder="Search or jump to...">
+      </div>
+      <div class="navigation-buttons">
+        <span><a href="#">Pull requests</a></span>
+        <span><a href="#">Issues</a></span>
+        <span><a href="#">Marketplace</a></span>
+        <span><a href="#">Explore</a></span>
+      </div>
+    </div>
+    <div class="right col-6"></div>
   </header>
 
   <!--****************************** body container -->
@@ -40,7 +56,7 @@
       <div class="overview row no-gutters"></div>
       <div class="search-bar row no-gutters">
         <form action="">
-          <input type="text" placeholder="Find a repository...">
+          <input type="text" placeholder="Find a repository..." class="input-bar">
           <button type="button" class="btn btn-light">Type: All</button>
           <button type="button" class="btn btn-light">Language: All</button>
           <button type="button" class="btn btn-success">New</button>
@@ -66,8 +82,8 @@
 <script id="profile-template" type="text/x-handlebars-template">
   {{#prof}}
   <div><img src={{avatar_url}} alt="">
-  <div>{{name}}</div>
-  <div>{{login}}</div>
+  <div class="name">{{name}}</div>
+  <div class="login-name">{{login}}</div>
   </div>
   {{/prof}}
 </script>

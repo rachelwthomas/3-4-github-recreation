@@ -1,6 +1,17 @@
 .header {
   background-color: #25292E;
-  height: 20px; }
+  color: #FFF; }
+  .header .left {
+    display: inline-block; }
+  .header .searchbar {
+    display: inline-block; }
+    .header .searchbar input {
+      color: #404448; }
+  .header .navigation-buttons {
+    display: inline-block; }
+  .header .navigation-buttons a {
+    text-decoration: none;
+    color: #FFF; }
 
 .main {
   background-color: #FFF;
@@ -17,6 +28,14 @@
 .profile-picture img {
   width: 100%; }
 
+.name {
+  font-size: 25px;
+  font-weight: bold;
+  color: #25292E; }
+
+.login-name {
+  color: #717171; }
+
 .organizations img {
   height: 25px; }
 
@@ -27,9 +46,16 @@
 .search-bar {
   border: solid 1px black; }
 
+.input-bar {
+  width: 300px; }
+
 .repos {
   width: 100%;
   padding: 10px;
   border: solid 1px black; }
+  .repos .title {
+    color: #2668CF;
+    font-size: 20px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=styles.css.map */
