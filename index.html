@@ -64,7 +64,7 @@
     </div>
 
   <!-- main container   -->
-    <div class="main col-md-9 col-lg-7 col-xl-6 ">
+    <div class="main col-md-9 col-lg-8 col-xl-6 ">
       <div class="overview row no-gutters">
         <span><a>Overview</a></span>
         <span><a>Repositories</a></span>
@@ -116,6 +116,24 @@
 
 <script id="repos-template" type="text/x-handlebars-template">
   {{#repo}}
+  <div class="row">
+   <div class="repos">
+     <div class="row">
+      <div class="title">{{name}}</div>
+     </div>
+    <div class="row">
+       <div class="language">{{language}}</div>
+       <div class="fork">{{fork}}</div>
+       <div class="license">{{license}}</div>
+       <div class="update">{{updated_at}}</div>
+    </div>
+   </div>
+  </div>
+  {{/repo}}
+</script>
+
+<!-- <script id="repos-template" type="text/x-handlebars-template">
+  {{#repo}}
   <div class="repos">
     <div class="title">{{name}}</div>
     <div class="row">
@@ -126,7 +144,7 @@
     </div>
   </div>
   {{/repo}}
-</script>
+</script> -->
 
 
 
@@ -140,6 +158,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src"moment.js"></script>
   <script src="config.js"></script>
   <script src="main.js"></script>
 </body>
