@@ -21,15 +21,15 @@
   </header>
 
   <!--****************************** body container -->
-  <div class="row">
+  <div class="row no-gutters">
 
   <!-- aside container -->
     <div class="aside col-md-4 offset-lg-1 col-lg-3 offset-xl-2 col-xl-2">
-    <div class="profile-picture row"></div>
-    <div class="edit-button row">
+    <div class="profile-picture row no-gutters"></div>
+    <div class="edit-button row no-gutters">
       <button type="button" class="btn btn-light">Edit Profile</button>
     </div>
-    <div class="organizations row">
+    <div class="organizations row no-gutters">
       Organizations
     </div>
 
@@ -37,8 +37,8 @@
 
   <!-- main container   -->
     <div class="main col-md-8 col-lg-7 col-xl-6 ">
-      <div class="overview row"></div>
-      <div class="search-bar row">
+      <div class="overview row no-gutters"></div>
+      <div class="search-bar row no-gutters">
         <form action="">
           <input type="text" placeholder="Find a repository...">
           <button type="button" class="btn btn-light">Type: All</button>
@@ -47,18 +47,8 @@
 
         </form>
       </div>
-      <div class="repo row"></div>
-      <!-- <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div> -->
+      <div class="repo-section">
+      </div>
 
     </div>
 
@@ -88,10 +78,14 @@
 
 <script id="repos-template" type="text/x-handlebars-template">
   {{#repo}}
-  <div>
+  <div class="repos">
     <div class="title">{{name}}</div>
-    <div>{{language}}</div>
-    <div>{{updated_at}}</div>
+    <div class="row">
+      <div class="language">{{language}}</div>
+      <div class="fork">{{fork}}</div>
+    <div class="license">{{license}}</div>
+      <div class="update">{{updated_at}}</div>
+    </div>
   </div>
   {{/repo}}
 </script>

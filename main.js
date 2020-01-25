@@ -106,7 +106,7 @@ $.ajax(`https://api.github.com/users/rachelwthomas/repos?
     let repoSource = $('#repos-template').html(); // html of your template
     let repoTemplate = Handlebars.compile(repoSource); // returns a function
     let repoHtml = repoTemplate({repo: reposData}) // creates your html
-    $('.repo').html(repoHtml); // update the DOM
+    $('.repo-section').html(repoHtml); // update the DOM
   }
 
 
