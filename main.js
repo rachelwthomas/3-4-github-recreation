@@ -32,7 +32,7 @@ $(document).ready(function() {
 $.ajax(`https://api.github.com/users/rachelwthomas?
   client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
   .done((resp) => {
-   console.log(resp);
+   // console.log(resp);
    updateProfileTemplate(resp)
   })
   .fail((err) => {
@@ -43,27 +43,21 @@ $.ajax(`https://api.github.com/users/rachelwthomas?
   });
 
   let updateProfileTemplate = (profData) => {
-    console.log('prof', profData);
+    // console.log('prof', profData);
+
+
+
+    let profile = $('#profile-template').html();
+
+    let profileTemplate = Handlebars.compile(profile);
+
+    let prof = {avatar_url:"https://avatars0.githubusercontent.com/u/58479626?v=4",login:"rachelwthomas",name:"Rachel Thomas"}
+
+    let htmlProf = profileTemplate(prof);
+    // console.log(htmlProf);
+
+    $('.profile-picture').html(htmlProf);
   }
-
-
-
-
-
-
-
-let profile = $('#profile-template').html();
-
-let profileTemplate = Handlebars.compile(profile);
-
-let prof = {avatar_url:"https://avatars0.githubusercontent.com/u/58479626?v=4",login:"rachelwthomas",name:"Rachel Thomas"}
-
-let htmlProf = profileTemplate(prof);
-console.log(htmlProf);
-
-$('.profile-picture').html(htmlProf);
-
-
 
 // *************************************************Organizations
 
@@ -71,7 +65,7 @@ $('.profile-picture').html(htmlProf);
  $.ajax(`https://api.github.com/users/rachelwthomas/orgs?
    client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
    .done((resp) => {
-    console.log(resp);
+    // console.log(resp);
     updateOrgsTemplate(resp)
    })
    .fail((err) => {
@@ -82,28 +76,45 @@ $('.profile-picture').html(htmlProf);
    });
 
    let updateOrgsTemplate = (orgsData) => {
-     console.log('orgs', orgsData);
+     // console.log('orgs', orgsData);
+     let source = $('#organizations-template').html(); // html of your template
+     let template = Handlebars.compile(source); // returns a function
+     let html = template({orgs: orgsData}) // creates your html
+     $('.organizations').html(html); // update the DOM
    }
 
 
 
 
+// *******************************************************************REPOS
+
+$.ajax(`https://api.github.com/users/rachelwthomas/repos?
+  client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  .done((resp) => {
+   // console.log(resp);
+   updateReposTemplate(resp)
+  })
+  .fail((err) => {
+    console.log(err);
+  })
+  .always(() => {
+    // console.log('always fires');
+  });
+
+  let updateReposTemplate = (reposData) => {
+    // console.log('orgs', orgsData);
+    let repoSource = $('#repos-template').html(); // html of your template
+    let repoTemplate = Handlebars.compile(repoSource); // returns a function
+    let repoHtml = repoTemplate({repo: reposData}) // creates your html
+    $('.repo').html(repoHtml); // update the DOM
+  }
 
 
 
-let organizations = $('#organizations-template').html();
-
-let organizationsTemplate = Handlebars.compile(organizations);
-
-let orgs = {avatar_url:"https://avatars1.githubusercontent.com/u/46451814?v=4"}
-
-let htmlOrgs = organizationsTemplate(orgs);
-console.log(htmlOrgs);
-
-$('.organizations').html(htmlOrgs);
 
 
-// *******************************************************************
+
+
 
 // let organizations = $('#organizations-template').html();
 //

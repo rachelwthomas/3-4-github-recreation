@@ -26,7 +26,9 @@
   <!-- aside container -->
     <div class="aside col-md-4 offset-lg-1 col-lg-3 offset-xl-2 col-xl-2">
     <div class="profile-picture row"></div>
-    <div class="name-section row"></div>
+    <div class="edit-button row">
+      <button type="button" class="btn btn-light">Edit Profile</button>
+    </div>
     <div class="organizations row">
       Organizations
     </div>
@@ -46,6 +48,7 @@
         </form>
       </div>
       <div class="repo row"></div>
+      <!-- <div class="repo row"></div>
       <div class="repo row"></div>
       <div class="repo row"></div>
       <div class="repo row"></div>
@@ -55,8 +58,7 @@
       <div class="repo row"></div>
       <div class="repo row"></div>
       <div class="repo row"></div>
-      <div class="repo row"></div>
-      <div class="repo row"></div>
+      <div class="repo row"></div> -->
 
     </div>
 
@@ -73,13 +75,25 @@
 
 <script id="profile-template" type="text/x-handlebars-template">
   <div><img src={{avatar_url}} alt="">
-  <div>{{login}}</div>
   <div>{{name}}</div>
+  <div>{{login}}</div>
   </div>
+</script>
 
 <script id="organizations-template" type="text/x-handlebars-template">
+  {{#orgs}}
   <div><img src={{avatar_url}} alt=""></div>
+  {{/orgs}}
+</script>
 
+<script id="repos-template" type="text/x-handlebars-template">
+  {{#repo}}
+  <div>
+    <div class="title">{{name}}</div>
+    <div>{{language}}</div>
+    <div>{{updated_at}}</div>
+  </div>
+  {{/repo}}
 </script>
 
 
