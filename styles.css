@@ -8,9 +8,12 @@
   .header .searchbar {
     display: inline-block; }
     .header .searchbar input {
-      color: #404448; }
+      background-color: #404448;
+      border: none; }
   .header .navigation-buttons {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold; }
   .header .navigation-buttons a {
     text-decoration: none;
     color: #FFF;
@@ -21,7 +24,7 @@
 
 .left .github-icon i {
   display: inline-block;
-  font-size: 25px; }
+  font-size: 32px; }
 
 .main {
   background-color: #FFF;
@@ -29,10 +32,25 @@
 
 .overview {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  border-bottom: solid 1px #E3E4E8; }
 
 .overview span {
+  padding-bottom: 15px; }
+
+.overview span a {
+  text-decoration: none;
   color: #5E636B; }
+
+.overview span:hover {
+  border-bottom: solid 3px #E3E4E8; }
+
+.search-bar {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.input-bar {
+  width: 300px; }
 
 .aside {
   background-color: #FFF;
@@ -57,9 +75,6 @@
 .organizations img {
   width: 25px; }
 
-.input-bar {
-  width: 300px; }
-
 .repos {
   width: 100%;
   padding: 10px;
@@ -69,5 +84,9 @@
     color: #2668CF;
     font-size: 20px;
     font-weight: bold; }
+  .repos .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
 
 /*# sourceMappingURL=styles.css.map */
