@@ -98,15 +98,26 @@ $.ajax(`https://api.github.com/users/rachelwthomas/repos?
   });
 
   let updateReposTemplate = (reposData) => {
-    // console.log('orgs', orgsData);
     let repoSource = $('#repos-template').html(); // html of your template
     let repoTemplate = Handlebars.compile(repoSource); // returns a function
     let repoHtml = repoTemplate({repo: reposData}) // creates your html
     $('.repo-section').html(repoHtml); // update the DOM
+    console.log('repo', reposData);
+
+    let obj = reposData.find(o => o.fork === false);
+    console.log(obj)
+
+
+
   }
 
 
-
+ // let displayForkIcon() {
+ //   if(){
+ //
+ //   }
+ //
+ // }
 
 
 

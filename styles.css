@@ -1,5 +1,7 @@
 .header {
   background-color: #25292E;
+  margin-bottom: 20px;
+  height: 60px;
   color: #FFF; }
   .header .left {
     display: inline-block; }
@@ -11,18 +13,23 @@
     display: inline-block; }
   .header .navigation-buttons a {
     text-decoration: none;
-    color: #FFF; }
+    color: #FFF;
+    line-height: 20px; }
+
+.left .github-icon {
+  display: inline-block; }
+
+.left .github-icon i {
+  display: inline-block;
+  font-size: 25px; }
 
 .main {
   background-color: #FFF;
   border: solid 1px black;
-  height: 20px;
   margin-left: 20px; }
 
 .aside {
   background-color: #FFF;
-  border: solid 1px black;
-  height: 20px;
   margin-right: 20px; }
 
 .profile-picture img {
@@ -36,11 +43,15 @@
 .login-name {
   color: #717171; }
 
+.edit-button button {
+  width: 100%;
+  background-color: #F3F6F8;
+  border: solid 1px #C6C8CC; }
+
 .organizations img {
-  height: 25px; }
+  width: 25px; }
 
 .overview {
-  height: 20px;
   border: solid 1px black; }
 
 .search-bar {

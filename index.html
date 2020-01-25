@@ -7,6 +7,7 @@
   <title>Github</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/6888ed7247.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,7 +23,7 @@
 
   <header class="header row">
     <div class="left col-6">
-      <div class="github-icon"></div>
+      <div class="github-icon"><i class="fab fa-github"></i></div>
       <div class="searchbar">
         <input type="text" placeholder="Search or jump to...">
       </div>
@@ -40,7 +41,18 @@
   <div class="row no-gutters">
 
   <!-- aside container -->
-    <div class="aside col-md-4 offset-lg-1 col-lg-3 offset-xl-2 col-xl-2">
+    <!-- <div class="aside col-md-4 offset-lg-1 col-lg-3 offset-xl-2 col-xl-2">
+    <div class="profile-picture row no-gutters"></div>
+    <div class="edit-button row no-gutters">
+      <button type="button" class="btn btn-light">Edit Profile</button>
+    </div>
+    <div class="organizations row no-gutters">
+      Organizations
+    </div>
+
+    </div> -->
+
+    <div class="aside col-md-4  col-lg-3 offset-xl-2 col-xl-2">
     <div class="profile-picture row no-gutters"></div>
     <div class="edit-button row no-gutters">
       <button type="button" class="btn btn-light">Edit Profile</button>
@@ -52,8 +64,16 @@
     </div>
 
   <!-- main container   -->
-    <div class="main col-md-8 col-lg-7 col-xl-6 ">
-      <div class="overview row no-gutters"></div>
+    <div class="main col-md-9 col-lg-7 col-xl-6 ">
+      <div class="overview row no-gutters">
+        <span><a>Overview</a></span>
+        <span><a>Repositories</a></span>
+        <span><a>Projects</a></span>
+        <span><a>Packages</a></span>
+        <span><a>Stars</a></span>
+        <span><a>Followers</a></span>
+        <span><a>Following</a></span>
+      </div>
       <div class="search-bar row no-gutters">
         <form action="">
           <input type="text" placeholder="Find a repository..." class="input-bar">
