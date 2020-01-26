@@ -63,12 +63,24 @@
 .search-bar {
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: solid 1px #E3E4E8; }
+  border-bottom: solid 1px #E3E4E8;
+  font-size: 14px; }
 
 .input-bar {
-  width: 500px;
   font-size: 14px;
-  padding: 7px 5px; }
+  padding: 7px 5px;
+  margin-right: 15px; }
+
+.search-bar i {
+  padding-right: 3px; }
+
+.search-bar button {
+  font-size: 14px;
+  border: solid 1px #C6C8CC; }
+
+.search-bar span {
+  font-size: 14px;
+  font-weight: bold; }
 
 .aside {
   background-color: #FFF;
