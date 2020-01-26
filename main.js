@@ -112,12 +112,7 @@ $.ajax(`https://api.github.com/users/rachelwthomas/repos?
   }
 
 
- // let displayForkIcon() {
- //   if(){
- //
- //   }
- //
- // }
+
 
 
 
