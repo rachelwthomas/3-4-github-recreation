@@ -6,10 +6,12 @@
   .header .left {
     display: inline-block; }
   .header .searchbar {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 10px; }
     .header .searchbar input {
       background-color: #404448;
-      border: none; }
+      border: none;
+      width: 280px; }
   .header .navigation-buttons {
     display: inline-block;
     font-size: 14px;
@@ -17,14 +19,17 @@
   .header .navigation-buttons a {
     text-decoration: none;
     color: #FFF;
-    line-height: 20px; }
+    line-height: 20px;
+    margin-right: 10px; }
 
 .left .github-icon {
   display: inline-block; }
 
 .left .github-icon i {
   display: inline-block;
-  font-size: 32px; }
+  font-size: 32px;
+  padding-top: 10px;
+  margin-right: 10px; }
 
 .main {
   background-color: #FFF;
@@ -56,8 +61,14 @@
   background-color: #FFF;
   margin-right: 20px; }
 
+.profile-picture {
+  padding-bottom: 15px; }
+
 .profile-picture img {
-  width: 100%; }
+  width: 100%;
+  border: solid 1px #E2E4E8;
+  margin-bottom: 15px;
+  padding-bottom: 30px; }
 
 .name {
   font-size: 25px;
@@ -67,10 +78,21 @@
 .login-name {
   color: #717171; }
 
+.edit-button {
+  padding-bottom: 32px;
+  border-bottom: solid 1px #E2E4E8; }
+
 .edit-button button {
   width: 100%;
   background-color: #F3F6F8;
   border: solid 1px #C6C8CC; }
+
+.org-heading {
+  margin-top: 20px;
+  font-weight: bold; }
+
+.organizations {
+  margin-top: 10px; }
 
 .organizations img {
   width: 25px; }
