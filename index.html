@@ -57,13 +57,13 @@
   <!-- main container   -->
     <div class="main col-md-9 col-lg-8 col-xl-6 ">
       <div class="overview row no-gutters">
-        <span><a href="#">Overview</a><div class ="count"></div></span>
-        <span><a href="#">Repositories</a><div class ="count"></div></span>
-        <span><a href="#">Projects</a><div class ="count"></div></span>
-        <span><a href="#">Packages</a><div class ="count"></div></span>
-        <span><a href="#">Stars</a><div class ="count"></div></span>
-        <span><a href="#">Followers</a><div class ="count"></div></span>
-        <span><a href="#">Following</a><div class ="count"></div></span>
+        <span><a href="https://github.com/rachelwthomas">Overview</a><div class ="count"></div></span>
+        <span><a href="https://github.com/rachelwthomas?tab=repositories">Repositories</a><div class ="count"></div></span>
+        <span><a href="https://github.com/rachelwthomas?tab=projects">Projects</a><div class ="count"></div></span>
+        <span><a href="https://github.com/rachelwthomas?tab=packages">Packages</a><div class ="count"></div></span>
+        <span><a href="https://github.com/rachelwthomas?tab=stars">Stars</a><div class ="count"></div></span>
+        <span><a href="https://github.com/rachelwthomas?tab=followers">Followers</a><div class ="count"></div></span>
+        <span><a href="https://github.com/rachelwthomas?tab=following">Following</a><div class ="count"></div></span>
       </div>
       <div class="search-bar row no-gutters">
         <form action="" class="row no-gutters">
@@ -130,6 +130,11 @@
   {{/repo}}
 </script>
 
+<script id="numbers-template" type="text/x-handlebars-template">
+  {{#numbers}}
+  <div>{{repos_url}}</div>
+  {{/numbers}}
+</script>
 
 
 

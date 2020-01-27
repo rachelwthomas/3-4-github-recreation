@@ -110,6 +110,31 @@ $.ajax(`https://api.github.com/users/rachelwthomas/repos?
 
   }
 
+  $.ajax(`https://api.github.com/users/rachelwthomas/repos?
+    client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+    .done((resp) => {
+     // console.log(resp);
+     updateNumbersTemplate(resp)
+    })
+    .fail((err) => {
+      console.log(err);
+    })
+    .always(() => {
+      // console.log('always fires');
+    });
+
+    let updateNumbersTemplate = (numbersData) => {
+      let numbersSource = $('#numbers-template').html(); // html of your template
+      let numbersTemplate = Handlebars.compile(numbersSource); // returns a function
+      let repoHtml = repoTemplate({numbers: numbersData}) // creates your html
+      $('.count').html(numbersHtml); // update the DOM
+      console.log('numbers', numbersData);
+
+
+
+
+
+    }
 
 
 
