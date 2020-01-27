@@ -104,8 +104,7 @@ $.ajax(`https://api.github.com/users/rachelwthomas/repos?
     $('.repo-section').html(repoHtml); // update the DOM
     console.log('repo', reposData);
 
-    let obj = reposData.find(o => o.fork === false);
-    console.log(obj)
+
 
 
 

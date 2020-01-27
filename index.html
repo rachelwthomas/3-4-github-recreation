@@ -57,13 +57,13 @@
   <!-- main container   -->
     <div class="main col-md-9 col-lg-8 col-xl-6 ">
       <div class="overview row no-gutters">
-        <span><a href="#">Overview</a></span>
-        <span><a href="#">Repositories</a></span>
-        <span><a href="#">Projects</a></span>
-        <span><a href="#">Packages</a></span>
-        <span><a href="#">Stars</a></span>
-        <span><a href="#">Followers</a></span>
-        <span><a href="#">Following</a></span>
+        <span><a href="#">Overview</a><div class ="count"></div></span>
+        <span><a href="#">Repositories</a><div class ="count"></div></span>
+        <span><a href="#">Projects</a><div class ="count"></div></span>
+        <span><a href="#">Packages</a><div class ="count"></div></span>
+        <span><a href="#">Stars</a><div class ="count"></div></span>
+        <span><a href="#">Followers</a><div class ="count"></div></span>
+        <span><a href="#">Following</a><div class ="count"></div></span>
       </div>
       <div class="search-bar row no-gutters">
         <form action="" class="row no-gutters">
@@ -105,6 +105,7 @@
   {{/orgs}}
 </script>
 
+
 <script id="repos-template" type="text/x-handlebars-template">
   {{#repo}}
   <div class="repos row no-gutters">
@@ -113,6 +114,7 @@
       <div class="title"><a href="{{html_url}}">{{name}}</a></div>
      </div>
     <div class="row no-gutters">
+      <div class="circle"></div>
        <div class="language">{{language}}</div>
        <div class="fork">{{fork}}</div>
        <div class="license">{{license}}</div>

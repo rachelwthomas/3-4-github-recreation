@@ -154,4 +154,10 @@
   .repos .right i {
     font-size: 12px; }
 
+.circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: red; }
+
 /*# sourceMappingURL=styles.css.map */
