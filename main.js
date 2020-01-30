@@ -29,8 +29,7 @@ $(document).ready(function() {
 // ***********************************************************Profile picture
 
 
-$.ajax(`https://api.github.com/users/rachelwthomas?
-  client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+$.ajax(`https://api.github.com/users/rachelwthomas`)
   .done((resp) => {
    // console.log(resp);
    updateProfileTemplate(resp)
@@ -58,8 +57,7 @@ $.ajax(`https://api.github.com/users/rachelwthomas?
 // *************************************************Organizations
 
 
- $.ajax(`https://api.github.com/users/rachelwthomas/orgs?
-   client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+ $.ajax(`https://api.github.com/users/rachelwthomas/orgs`)
    .done((resp) => {
     // console.log(resp);
     updateOrgsTemplate(resp)
@@ -84,8 +82,7 @@ $.ajax(`https://api.github.com/users/rachelwthomas?
 
 // *******************************************************************REPOS
 
-$.ajax(`https://api.github.com/users/rachelwthomas/repos?
-  client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+$.ajax(`https://api.github.com/users/rachelwthomas/repos`)
   .done((resp) => {
    // console.log(resp);
    updateReposTemplate(resp)
@@ -110,8 +107,7 @@ $.ajax(`https://api.github.com/users/rachelwthomas/repos?
 
   }
 
-  $.ajax(`https://api.github.com/users/rachelwthomas/repos?
-    client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  $.ajax(`https://api.github.com/users/rachelwthomas/repos`)
     .done((resp) => {
      // console.log(resp);
      updateNumbersTemplate(resp)
